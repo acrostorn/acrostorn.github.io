@@ -1,147 +1,132 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NU-normal</title>
-    <style>
-        /* リセット */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #333333; /* 暗めのグレー */
-            margin: 0;
-        }
-
-        header {
-            background-color: #444444;
-            padding: 40px;
-            width: 100%;
-            max-width: 800px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            font-weight: 600;
-            color: #fff;
-        }
-
-        header p {
-            font-size: 1.2em;
-            color: #ddd;
-            margin-top: 10px;
-        }
-
-        main {
-            padding: 40px 20px;
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .app-image {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 20px;
-            margin-top: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .features {
-            margin-top: 30px;
-            font-size: 1.1em;
-            color: #eee;
-            line-height: 1.6;
-            font-weight: 500; /* 紹介文のフォントを太く */
-        }
-
-        .download-buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            gap: 10px;
-        }
-
-        .download-buttons a {
-            display: inline-block;
-            padding: 12px 50px;
-            font-size: 1em;
-            font-weight: 500;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            background-color: #007aff;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .download-buttons a:hover {
-            background-color: #005bb5;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #444444;
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-        }
-
-        .privacy_policy a {
-            color: #007aff;
-            text-decoration: none;
-            font-size: 1em;
-        }
-
-        .privacy_policy a:hover {
-            text-decoration: underline;
-        }
-
-        footer p {
-            font-size: 0.9em;
-            color: #aaa;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>acrostorn</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 外部CSSの読み込み -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-<header>
-    <h1>NU-normal</h1>
-</header>
-
-<main>
-    <p class="features">名大生、名大受験生により快適な生活を。単位を、合格を、より確実に掴み取るための機能をお届け。</p>
-
-    <img src="Guthrie Update - 2.png" alt="NU-normalアプリのイメージ" class="app-image">
-
-    <div class="download-buttons">
-        <a href="https://apps.apple.com/jp/app/nu-normal/id6504286478" target="_blank">App Storeでダウンロード</a>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- ナビゲーションバー -->
+  <nav class="fixed w-full bg-white shadow z-10">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold">acrostorn</div>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+        <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
     </div>
-</main>
+  </nav>
 
-<footer>
-    <div class="privacy_policy">
-        <a href="privacy_policy.html">privacy policy</a>
+  <!-- ヒーローセクション -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center pt-20 fade-in">
+    <h1 class="text-5xl md:text-7xl font-bold mb-4">acrostorn</h1>
+    <p class="text-xl md:text-2xl text-gray-600">bachelor student of aerospace engineering</p>
+  </section>
+
+  <!-- プロジェクトセクション -->
+  <section id="projects" class="py-20 bg-gray-100 fade-in">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- プロジェクトカード：NU-normal -->
+        <div class="bg-white p-6 rounded-lg shadow transform transition duration-300 hover:shadow-xl hover:scale-105">
+          <!-- アプリアイコン -->
+          <img src="images/NUnormal-icon.png" alt="NU-normal icon" class="w-24 h-24 object-cover rounded-full shadow-xl mx-auto mb-4">
+          <h3 class="text-2xl font-semibold mb-2 text-center">NU-normal</h3>
+          <p class="text-gray-600 mb-4">
+            プロジェクトの概要をここに記載します。どんなアプリか、どのような工夫をしたかなど。
+          </p>
+          <!-- <a href="#" class="block mx-auto text-center text-blue-500 hover:underline">View Project</a> -->
+          <a href="#" class="block mx-auto text-center text-blue-500 hover:underline">AppStore</a>
+        </div>
+        <!-- プロジェクトカード：NU-leaves -->
+        <div class="bg-white p-6 rounded-lg shadow transform transition duration-300 hover:shadow-xl hover:scale-105">
+          <!-- アプリアイコン -->
+          <img src="images/NUleaves-icon.png" alt="NU-leaves icon" class="w-24 h-24 object-cover rounded-full shadow-xl mx-auto mb-4">
+          <h3 class="text-2xl font-semibold mb-2 text-center">NU-leaves</h3>
+          <p class="text-gray-600 mb-4">
+            プロジェクトの概要をここに記載します。どんなアプリか、どのような工夫をしたかなど。
+          </p>
+          <!-- <a href="#" class="block mx-auto text-center text-blue-500 hover:underline">View Project</a> -->
+          <a href="#" class="block mx-auto text-center text-blue-500 hover:underline">AppStore</a>
+        </div>
+        <!-- プロジェクトカード：OrbitPlay -->
+        <div class="bg-white p-6 rounded-lg shadow transform transition duration-300 hover:shadow-xl hover:scale-105">
+          <!-- アプリアイコン -->
+          <img src="images/OrbitPlay-icon.png" alt="OrbitPlay icon" class="w-24 h-24 object-cover rounded-full shadow-lg mx-auto mb-4">
+          <h3 class="text-2xl font-semibold mb-2 text-center">OrbitPlay</h3>
+          <p class="text-gray-600 mb-4">
+            My entry for WWDC25 Swift Student Challenge [Submitted]
+          </p>
+          <a href="https://github.com/acrostorn/OrbitPlay" class="block mx-auto text-blue-500 hover:underline text-center" target="_blank">GitHub</a>
+        </div>
+      </div>
     </div>
-    <p>&copy; 2024 acrostorn</p>
-</footer>
+  </section>
 
+  <!-- スキルセクション -->
+  <section id="skills" class="py-20 fade-in">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+      <div class="flex flex-wrap justify-center">
+        <!-- スキルはバッジのように表示 -->
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">SwiftUI</span>
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">AWS</span>
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">Firebase</span>
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">SceneKit</span>
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">PencilKit</span>
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">Python</span>
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">HTML/CSS</span>
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">Flutter</span>
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">JavaScript</span>
+        <!-- <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2"></span> -->
+        <span class="bg-blue-500 text-white px-4 py-2 rounded-full m-2">etc.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせセクション -->
+  <section id="contact" class="py-20 bg-gray-100 fade-in">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-8">Contact</h2>
+      <p class="text-gray-600 mb-4">
+        下記のリンクからご連絡いただけます。お気軽にどうぞ！
+      </p>
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="text-blue-500 hover:underline">Email</a>
+        <a href="#" class="text-blue-500 hover:underline">GitHub</a>
+        <a href="#" class="text-blue-500 hover:underline">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="py-6 text-center">
+    <p class="text-gray-500">&copy; 2025 acrostorn. All rights reserved.</p>
+  </footer>
+
+  <!-- 外部JavaScriptの読み込み -->
+  <script src="js/script.js"></script>
 </body>
 </html>
+<!-- ...existing code... -->
+<section id="contact" class="py-20 bg-gray-100 fade-in">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-8">Contact</h2>
+    <p class="text-gray-600 mb-4">
+      下記のリンクからご連絡いただけます。お気軽にどうぞ！
+    </p>
+    <div class="flex justify-center space-x-6">
+      <a href="#" class="text-blue-500 hover:underline">Email</a>
+      <a href="https://github.com" class="text-blue-500 hover:underline">GitHub</a>
+      <a href="#" class="text-blue-500 hover:underline">LinkedIn</a>
+    </div>
+  </div>
+</section>
+<!-- ...existing code... -->
